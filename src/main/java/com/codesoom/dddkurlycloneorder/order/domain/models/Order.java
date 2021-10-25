@@ -1,9 +1,21 @@
 package com.codesoom.dddkurlycloneorder.order.domain.models;
 
+import com.codesoom.dddkurlycloneorder.delivery.domain.models.Delivery;
+
+import javax.persistence.*;
+
+@Entity
 public class Order {
+    @Id
     private String orderId;
+
+    @OneToOne(targetEntity = OrderSheet.class)
     private OrderSheet orderSheet;
+
+    @Column(name = "order_state")
     private String orderState;
-    private String deliveryState;
+
+    @OneToOne(targetEntity = Delivery.class)
+    private Delivery delivery;
 
 }
