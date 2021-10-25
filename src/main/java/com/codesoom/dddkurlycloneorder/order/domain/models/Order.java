@@ -5,6 +5,7 @@ import com.codesoom.dddkurlycloneorder.delivery.domain.models.Delivery;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "orders")
 public class Order {
     @Id
     private String orderId;

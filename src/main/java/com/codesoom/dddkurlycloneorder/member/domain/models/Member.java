@@ -1,11 +1,9 @@
 package com.codesoom.dddkurlycloneorder.member.domain.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "members")
 public class Member {
     @Id
     private String memberId;

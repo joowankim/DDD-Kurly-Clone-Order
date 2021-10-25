@@ -1,11 +1,9 @@
 package com.codesoom.dddkurlycloneorder.product.domain.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "products")
 public class Product {
     @Id
     private String productId;
